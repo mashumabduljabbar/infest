@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Infest</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Alternative to Bootstrap 3 Glyphicons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    {# MEDIUM STYLE EDITOR#}
+    <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+    {# Custom CSS#}
+    <link rel="stylesheet" href="{% static 'css/porfolio.css' %}">
+
+    {# Fonts#}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Russo+One" rel="stylesheet">
+  </head>
+
+
+  <body id="bg">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:fixed; top:0; width:100%;">
+    <a class="navbar-brand bigbrand" href="http://127.0.0.1:8000">Infest</a>
+
+    <!-- at the bottom of the body section for this to work -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Add a link to the Signup page -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-nav ml-auto white">
+          <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+  {# The actual blog posts#}
+    <div class="content container forbody">
+        <div class="row">
+            <div class="col-md-12 col-lg-10" style="margin:0 auto; margin-top: 1em;background-color: rgba(200,200,200,0.6);">
+              <div class="blog_posts">
+                {% block body_block %}
+                <div style="padding:3em;">
+                  <h1 class="posttitle" style="font-size:2em;">"Infest"</h1>
+                  <br>
+                  <p class="posttitle" style="font-size:1em;">Saya salut dengan para panitia yang menyelenggarakan kegiatan dengan baik dan sudah seperti penyelenggara kursus yang sudah punya nama besar, materi yang disampaikan cukup rinci dan tersedia tanya jawab yang mempermudah peserta, selain itu, pendaftaran kegiatan ini terbilang sangat-sangat murah, dapat ilmu bermanfaat dan juga sertifikat untuk koleksi dan mendukung dalam urusan profesional kedepeannya.!</p>
+                </div>
+                {% endblock %}
+
+              </div>
+            </div>
+        </div>
+    </div>
+		<div class="footer">
+			<p></p>
+		</div>
+  {# SCRIPTS#}
+  <script type="text/javascript" src="{% static 'js/blog.js' %}"></script>
+  <!-- Need to have JQuery and Javascript for DropDown Actions to work -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
